@@ -41,7 +41,7 @@ document.querySelector('#app').innerHTML = `
   <header class="hero">
     <h1>${escape(site.name)}</h1>
     <p class="tagline">${escape(site.tagline)}</p>
-    <p class="intro">${escape(site.intro)}</p>
+    ${site.intro ? `<p class="intro">${escape(site.intro)}</p>` : ''}
   </header>
 
   <main>
@@ -49,7 +49,7 @@ document.querySelector('#app').innerHTML = `
     <div class="cards">${projects.map(card).join('')}</div>
   </main>
 
-  <footer>
+  ${site.links.length ? `<footer>
     ${site.links.map((l) => `<a href="${escape(l.url)}">${escape(l.label)}</a>`).join('<span>·</span>')}
-  </footer>
+  </footer>` : ''}
 `

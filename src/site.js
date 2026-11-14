@@ -4,10 +4,10 @@
 export const site = {
   name: 'arkodex',
   tagline: 'Games and experiments.',
-  intro: 'Things I make — mostly browser games, plus whatever I am tinkering with next.',
+  // Optional longer text under the tagline. Leave empty ('') to hide it.
+  intro: '',
 
-  // Shown in the footer. Add more as { label, url }.
-  links: [
-    { label: 'itch.io', url: 'https://joulujukka.itch.io/' },
-  ],
+  // Links in the footer, e.g. { label: 'itch.io', url: 'https://…' }.
+  // Leave the list empty to hide the footer.
+  links: [],
 }
